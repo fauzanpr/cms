@@ -59,7 +59,7 @@ use Illuminate\Support\Facades\Route;
 // HALAMAN UTAMA
 Route::get('/', [HomeController::class, 'index']);
 
-// CATEGORY (ROUTE PREFIX)
+// HALAMAN CATEGORY
 Route::prefix('/category')->group( function () {
     Route::get('/marbel-edu-games', function () {
         return "INI ADALAH HALAMAN MARBEL EDU GAMES";
@@ -76,7 +76,7 @@ Route::prefix('/category')->group( function () {
     });
 });
 
-// NEWS (ROUTE PARAM)
+// HALAMAN NEWS
 Route::prefix('/news')->group(function () {
     Route::get('/', function () {
         return "INI ADALAH HALAMAN UTAMA NEWS";
@@ -86,7 +86,7 @@ Route::prefix('/news')->group(function () {
     });
 });
 
-// HALAMAN PROGRAM (ROUTE PREFIX)
+// HALAMAN PROGRAM
 Route::prefix('/program')->group(function () {
     Route::get('/karir', function () {
         return "KARIR : MENJADI DEVOPS DI GOOGLE"; 
@@ -99,5 +99,5 @@ Route::prefix('/program')->group(function () {
     });
 });
 
-// Halaman About Us (route biasa)
+// Halaman About Us
 Route::get('/about-us', [AboutController::class, 'about']);
