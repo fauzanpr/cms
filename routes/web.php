@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Hi! Selamat Datang di Website Laravel";
+});
+
+Route::get('/about', function () {
+    return "NIM : 2041720224 </br>
+    Nama : Fauzan Pradana </br>
+    Kelas : TI 2G";
+});
+
+Route::get('/articles/{id}', function ($id) {
+    return "Ini adalah halaman Artikel dengan ID " . $id;
 });
