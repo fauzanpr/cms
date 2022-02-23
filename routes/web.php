@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,16 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "Hi! Selamat Datang di Website Laravel";
-});
+// PRAKTIKUM 1
 
-Route::get('/about', function () {
-    return "NIM : 2041720224 </br>
-    Nama : Fauzan Pradana </br>
-    Kelas : TI 2G";
-});
+// Route::get('/', function () {
+//     return "Hi! Selamat Datang di Website Laravel";
+// });
 
-Route::get('/articles/{id}', function ($id) {
-    return "Ini adalah halaman Artikel dengan ID " . $id;
-});
+// Route::get('/about', function () {
+//     return "NIM : 2041720224 </br>
+//     Nama : Fauzan Pradana </br>
+//     Kelas : TI 2G";
+// });
+
+// Route::get('/articles/{id}', function ($id) {
+//     return "Ini adalah halaman Artikel dengan ID " . $id;
+// });
+
+
+//PRAKTIKUM 2
+
+Route::get('/', [PageController::class, 'index']);
+
+Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/articles/{id}', [PageController::class, 'articles']);
