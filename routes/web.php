@@ -57,47 +57,87 @@ use Illuminate\Support\Facades\Route;
 //PRAKTIKUM 3
 
 // HALAMAN UTAMA
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-// HALAMAN CATEGORY
-Route::prefix('/category')->group( function () {
-    Route::get('/marbel-edu-games', function () {
-        return "INI ADALAH HALAMAN MARBEL EDU GAMES";
-    });
-    Route::get('/marbel-and-friends-kids-games', function () {
-        return "INI ADALAH HALAMAN MARBEL AND FRIENDS KIDS GAMES";
-    });
-    Route::get('/riri-story-books', function () {
-        return "RIRI STORY BOOKS";
-    });
-    Route::get('/kolak-kids-songs', function () {
-        $lagu = "KOLAK - KOLAK - KOLAK";
-        return $lagu;
-    });
+// // HALAMAN CATEGORY
+// Route::prefix('/category')->group( function () {
+//     Route::get('/marbel-edu-games', function () {
+//         return "INI ADALAH HALAMAN MARBEL EDU GAMES";
+//     });
+//     Route::get('/marbel-and-friends-kids-games', function () {
+//         return "INI ADALAH HALAMAN MARBEL AND FRIENDS KIDS GAMES";
+//     });
+//     Route::get('/riri-story-books', function () {
+//         return "RIRI STORY BOOKS";
+//     });
+//     Route::get('/kolak-kids-songs', function () {
+//         $lagu = "KOLAK - KOLAK - KOLAK";
+//         return $lagu;
+//     });
+// });
+
+// // HALAMAN NEWS
+// Route::prefix('/news')->group(function () {
+//     Route::get('/', function () {
+//         return "INI ADALAH HALAMAN UTAMA NEWS";
+//     });
+//     Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function () {
+//         return "EDUCA STUDIO BERBAGI UNTUK WARGA SEKITAR TERDAMPAK COVID 19";
+//     });
+// });
+
+// // HALAMAN PROGRAM
+// Route::prefix('/program')->group(function () {
+//     Route::get('/karir', function () {
+//         return "KARIR : MENJADI DEVOPS DI GOOGLE";
+//     });
+//     Route::get('/magang', function () {
+//         return "MAGANG DIMANA YAK?";
+//     });
+//     Route::get('/kunjungan-industri', function () {
+//         return "KUNJUNGAN INDUSTRI YA";
+//     });
+// });
+
+// // Halaman About Us
+// Route::get('/about-us', [AboutController::class, 'about']);
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// JOBSHEET 3
+// PRAKTIKUM 1
+Route::get("/", function () {
+    return view("index", [
+        'headerType' => "one",
+        'layout' => "main"
+    ]);
 });
 
-// HALAMAN NEWS
-Route::prefix('/news')->group(function () {
-    Route::get('/', function () {
-        return "INI ADALAH HALAMAN UTAMA NEWS";
-    });
-    Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function () {
-        return "EDUCA STUDIO BERBAGI UNTUK WARGA SEKITAR TERDAMPAK COVID 19";
-    });
+Route::get("/about", function () {
+    return view("about", [
+        'headerType' => "two",
+        'layout' => "about-pape"
+    ]);
 });
 
-// HALAMAN PROGRAM
-Route::prefix('/program')->group(function () {
-    Route::get('/karir', function () {
-        return "KARIR : MENJADI DEVOPS DI GOOGLE"; 
-    });
-    Route::get('/magang', function () {
-        return "MAGANG DIMANA YAK?";
-    });
-    Route::get('/kunjungan-industri', function () {
-        return "KUNJUNGAN INDUSTRI YA";
-    });
+Route::get("/testmonial", function () {
+    return view("testmonial", [
+        'headerType' => "two",
+        'layout' => 'main'
+    ]);
 });
 
-// Halaman About Us
-Route::get('/about-us', [AboutController::class, 'about']);
+Route::get("/clients", function () {
+    return view("clients", [
+        'headerType' => "two",
+        'layout' => "product"
+    ]);
+});
+
+Route::get('/contact', function () {
+    return view('contact', [
+        'headerType' => "two",
+        'layout' => 'main'
+    ]);
+});
