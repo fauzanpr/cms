@@ -6,6 +6,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -107,12 +108,12 @@ use Illuminate\Support\Facades\Route;
 
 // JOBSHEET 3
 // PRAKTIKUM 1
-Route::get("/", function () {
-    return view("index", [
-        'headerType' => "one",
-        'layout' => "main"
-    ]);
-});
+// Route::get("/", function () {
+//     return view("index", [
+//         'headerType' => "one",
+//         'layout' => "main"
+//     ]);
+// });
 
 Route::get("/about", function () {
     return view("about", [
@@ -141,3 +142,5 @@ Route::get('/contact', function () {
         'layout' => 'main'
     ]);
 });
+
+Route::resource('/', ProductController::class);
