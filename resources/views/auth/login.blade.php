@@ -11,6 +11,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        {{-- username --}}
                         <div class="row mb-3">
                             <label for="username" class="col-md-4 col-form-label text-md-end">{{ __('Username') }}</label>
 
@@ -25,6 +26,7 @@
                             </div>
                         </div>
 
+                        {{-- password --}}
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
@@ -39,6 +41,7 @@
                             </div>
                         </div>
 
+                        {{-- remember me --}}
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -51,6 +54,7 @@
                             </div>
                         </div>
 
+                        {{-- forgot password --}}
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -64,6 +68,7 @@
                                 @endif
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

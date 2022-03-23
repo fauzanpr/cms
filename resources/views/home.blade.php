@@ -5,6 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+
+                {{-- dashboard tittle --}}
                 <div class="card-header" style="background-color:rgb(255, 217, 0); font-weight:bold;">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
@@ -16,6 +18,7 @@
 
                     {{ __('You are logged in!') }}
 
+                    {{-- dashboard for active user --}}
                     <table class="table table-responsive">
                         <tr>
                             <th>Username</th>
@@ -38,6 +41,7 @@
                             <td>{{$user->created_at}}</td>
                         </tr>
                     </table>
+
                 </div>
             </div>
         </div>

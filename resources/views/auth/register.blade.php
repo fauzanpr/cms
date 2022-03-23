@@ -5,12 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+
+                {{-- register card form tittle --}}
                 <div class="card-header" style="background-color:rgb(255, 217, 0); font-weight:bold;">{{ __('Register') }}</div>
 
+                {{-- card form --}}
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        {{-- username --}}
                         <div class="row mb-3">
                             <label for="username" class="col-md-4 col-form-label text-md-end">{{ __('Usename') }}</label>
 
@@ -25,6 +29,7 @@
                             </div>
                         </div>
 
+                        {{-- name --}}
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
@@ -39,6 +44,7 @@
                             </div>
                         </div>
 
+                        {{-- email --}}
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
@@ -53,6 +59,7 @@
                             </div>
                         </div>
 
+                        {{-- password --}}
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
@@ -67,6 +74,7 @@
                             </div>
                         </div>
 
+                        {{-- password confirm --}}
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
@@ -75,6 +83,7 @@
                             </div>
                         </div>
 
+                        {{-- submit --}}
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -82,8 +91,10 @@
                                 </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
+
             </div>
         </div>
     </div>

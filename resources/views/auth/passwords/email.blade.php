@@ -5,8 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+
+                {{-- tittle reset password --}}
                 <div class="card-header" style="background-color: rgb(255, 217, 0); font-weight:bold;">{{ __('Reset Password') }}</div>
 
+                {{-- form card --}}
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -14,6 +17,7 @@
                         </div>
                     @endif
 
+                    {{-- form --}}
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
@@ -31,6 +35,7 @@
                             </div>
                         </div>
 
+                        {{-- submit --}}
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary mw-100" style="width: 250px">
@@ -38,7 +43,9 @@
                                 </button>
                             </div>
                         </div>
+
                     </form>
+
                 </div>
             </div>
         </div>

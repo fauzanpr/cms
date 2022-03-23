@@ -2,6 +2,8 @@
     <div class="header_main">
         <div class="container">
             <div class="row">
+
+                {{-- logo in header --}}
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col logo_section">
                     <div class="full">
                         <div class="center-desk">
@@ -10,6 +12,7 @@
                     </div>
                 </div>
 
+                {{-- navbar right in header --}}
                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
                     <div class="menu-area">
                         <div class="limit-box">
