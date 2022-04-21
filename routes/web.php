@@ -5,6 +5,7 @@
 // use App\Http\Controllers\AboutController;
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -156,3 +157,5 @@ Route::get("/login", function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('articles', ArticleController::class);
